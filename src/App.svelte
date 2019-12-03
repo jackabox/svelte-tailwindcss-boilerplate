@@ -1,30 +1,31 @@
 <script>
-	export let name;
+	import { Router, Route } from "svelte-routing";
+  import NavLink from "./components/NavLink.svelte";
+
+	import Home from "./routes/Home.svelte";
+  import Blog from "./routes/Blog.svelte";
+
+  export let url = "";
+  export let siteName;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router url="{url}">
+	<header>
+		<h1>{ siteName }</h1>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+	  <nav>
+	    <NavLink to="/">Home</NavLink>
+	    <NavLink to="blog">Blog</NavLink>
+	  </nav>
+	</header>
+  <main>
+    <Route path="/" component="{Home}" />
+    <Route path="blog/*" component="{Blog}" />
+  </main>
+</Router>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+<style global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 </style>
