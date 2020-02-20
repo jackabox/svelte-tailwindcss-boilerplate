@@ -1,10 +1,10 @@
 **Work In Progress**
 
-# Svelte, Routing, Tailwind CSS
+# Svelte + Tailwind CSS
 
-This is a basic boilerplate to get off the ground with Svelte, Routing and Tailwind CSS (along with Purge CSS).
+This is a basic boilerplate to get off the ground with Svelte and Tailwind CSS (along with Purge CSS).
 
-This repository alos links to an article I wrote at [https://jackwhiting.co.uk](https://jackwhiting.co.uk)
+This repository alos links to an article I wrote at [https://jackwhiting.co.uk](https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/)
 
 ## Setup
 
